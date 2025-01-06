@@ -1,6 +1,6 @@
 """Provide a service class for the extra viewer.
 
-Copyright (c) 2024 Peter Triesberger
+Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_extra_view
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
@@ -23,7 +23,7 @@ class ExtraViewService(SubController):
 
     def __init__(self, model, view, controller):
         super().initialize_controller(model, view, controller)
-        self.progressView = None
+        self.extraView = None
 
         #--- Load configuration.
         try:
@@ -40,22 +40,24 @@ class ExtraViewService(SubController):
         self.prefs = {}
         self.prefs.update(self.configuration.settings)
         self.prefs.update(self.configuration.options)
+        self._ui.root.bind('<<selection_changed>>', self._on_selection_change)
 
     def on_close(self):
-        """Close the window.
+        """The project is closed.
         
         Overrides the superclass method.
         """
-        self.on_quit()
+        if self.extraView is not None:
+            self.extraView.reset_view()
 
     def on_quit(self):
         """Write back the configuration file.
         
         Overrides the superclass method.
         """
-        if self.progressView is not None:
-            if self.progressView.isOpen:
-                self.progressView.on_quit()
+        if self.extraView is not None:
+            if self.extraView.isOpen:
+                self.extraView.on_quit()
 
         #--- Save configuration
         for keyword in self.prefs:
@@ -67,20 +69,28 @@ class ExtraViewService(SubController):
 
     def start_viewer(self, windowTitle):
         self.hide_contents_view()
-        if self.progressView:
-            if self.progressView.isOpen:
-                if self.progressView.popup.state() == 'iconic':
-                    self.progressView.popup.state('normal')
-                self.progressView.popup.lift()
-                self.progressView.popup.focus()
+        if self.extraView:
+            if self.extraView.isOpen:
+                if self.extraView.popup.state() == 'iconic':
+                    self.extraView.popup.state('normal')
+                self.extraView.popup.lift()
+                self.extraView.popup.focus()
                 return
 
-        self.progressView = ExtraView(self._mdl, self._ui, self._ctrl, self.prefs)
-        self.progressView.popup.title(f'{self._mdl.novel.title} - {windowTitle}')
-        set_icon(self.progressView.popup, icon='wLogo32', default=False)
+        self.extraView = ExtraView(self._mdl, self._ui, self._ctrl, self.prefs)
+        self.extraView.popup.title(f'{self._mdl.novel.title} - {windowTitle}')
+        set_icon(self.extraView.popup, icon='wLogo32', default=False)
 
     def hide_contents_view(self):
         """Show/hide the contents viewer text box."""
         if self._ui.middleFrame.winfo_manager():
             self._ui.middleFrame.pack_forget()
 
+    def _on_selection_change(self, event=None):
+        if self.extraView is None:
+            return
+
+        if not self.extraView.isOpen:
+            return
+
+        self.extraView.see(self._ui.selectedNode)

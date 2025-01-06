@@ -1,6 +1,6 @@
 """Provide platform specific settings for the nv_extra_view plugin.
 
-Copyright (c) 2024 Peter Triesberger
+Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_extra_view
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """

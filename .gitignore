@@ -1,0 +1,6 @@
+/test/work/
+/test/temp/
+/test/nv_extra_view.py
+/build/
+*.pyc
+*.bak
