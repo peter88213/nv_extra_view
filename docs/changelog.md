@@ -10,4 +10,4 @@
 
 - Alpha release under the GPLv3 license.
 
-Compatibility: noveltree 5.0 API
+Compatibility: novelibre 5.0 API
