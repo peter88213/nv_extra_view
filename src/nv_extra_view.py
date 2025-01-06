@@ -25,7 +25,7 @@ from nvextraview.extra_view_service import ExtraViewService
 class Plugin(PluginBase):
     """novelibre detach text viewer plugin class."""
     VERSION = '@release'
-    API_VERSION = '5.0'
+    API_VERSION = '5.6'
     DESCRIPTION = 'Text viewer popup'
     URL = 'https://github.com/peter88213/nv_extra_view'
     HELP_URL = f'{_("https://peter88213.github.io/nvhelp-en")}/nv_extra_view'

@@ -6,8 +6,8 @@
 
 
 
-### Version 0.1.0
+### Version 0.3.0
 
 - Alpha release under the GPLv3 license.
 
-Compatibility: novelibre 5.0 API
+Compatibility: novelibre 5.6 API
