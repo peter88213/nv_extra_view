@@ -1,4 +1,4 @@
-"""Provide a tkinter widget for progress log display.
+"""Provide a tkinter widget for a text viewer popup window.
 
 Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_extra_view
