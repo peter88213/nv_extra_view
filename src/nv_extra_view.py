@@ -33,7 +33,7 @@ class Plugin(PluginBase):
     FEATURE = _('Detach text viewer')
 
     def install(self, model, view, controller):
-        """Add a submenu to the 'Tools' menu.
+        """Extend the 'View' menu.
         
         Positional arguments:
             model -- reference to the main model instance of the application.
@@ -45,7 +45,7 @@ class Plugin(PluginBase):
         super().install(model, view, controller)
         self.extraViewService = ExtraViewService(model, view, controller)
 
-        # Create an entry in the Tools menu.
+        # Create an entry in the View menu.
         self._ui.viewMenu.add_command(label=self.FEATURE, command=self.start_viewer)
         self._ui.viewMenu.entryconfig(self.FEATURE)
 
