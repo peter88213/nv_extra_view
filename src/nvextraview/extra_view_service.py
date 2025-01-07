@@ -19,6 +19,7 @@ class ExtraViewService(SubController):
     )
     OPTIONS = dict(
         show_markup=False,
+        is_open=False
     )
 
     def __init__(self, model, view, controller):
@@ -41,6 +42,8 @@ class ExtraViewService(SubController):
         self.prefs.update(self.configuration.settings)
         self.prefs.update(self.configuration.options)
         self._ui.root.bind('<<selection_changed>>', self._on_selection_change)
+        if self.prefs['is_open']:
+            self.start_viewer()
 
     def on_close(self):
         """The project is closed.
@@ -49,6 +52,7 @@ class ExtraViewService(SubController):
         """
         if self.extraView is not None:
             self.extraView.reset_view()
+            self.extraView.popup.title('')
 
     def on_quit(self):
         """Write back the configuration file.
@@ -67,7 +71,7 @@ class ExtraViewService(SubController):
                 self.configuration.settings[keyword] = self.prefs[keyword]
         self.configuration.write(self.iniFile)
 
-    def start_viewer(self, windowTitle):
+    def start_viewer(self):
         self.hide_contents_view()
         if self.extraView:
             if self.extraView.isOpen:
@@ -78,7 +82,6 @@ class ExtraViewService(SubController):
                 return
 
         self.extraView = ExtraView(self._mdl, self._ui, self._ctrl, self.prefs)
-        self.extraView.popup.title(f'{self._mdl.novel.title} - {windowTitle}')
         set_icon(self.extraView.popup, icon='wLogo32', default=False)
 
     def hide_contents_view(self):

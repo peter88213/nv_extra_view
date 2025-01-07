@@ -15,8 +15,6 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-import webbrowser
-
 from nvlib.controller.plugin.plugin_base import PluginBase
 from nvextraview.extra_view_locale import _
 from nvextraview.extra_view_service import ExtraViewService
@@ -46,7 +44,8 @@ class Plugin(PluginBase):
         self.extraViewService = ExtraViewService(model, view, controller)
 
         # Create an entry in the View menu.
-        self._ui.viewMenu.add_command(label=self.FEATURE, command=self.start_viewer)
+        pos = self._ui.viewMenu.index(_('Detach/Dock Properties')) + 1
+        self._ui.viewMenu.insert_command(pos, label=self.FEATURE, command=self.start_viewer)
         self._ui.viewMenu.entryconfig(self.FEATURE)
 
     def on_close(self):
@@ -63,9 +62,6 @@ class Plugin(PluginBase):
         """
         self.extraViewService.on_quit()
 
-    def open_help(self, event=None):
-        webbrowser.open(self.HELP_URL)
-
     def start_viewer(self):
-        self.extraViewService.start_viewer(self.FEATURE)
+        self.extraViewService.start_viewer()
 

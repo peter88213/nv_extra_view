@@ -4,7 +4,11 @@
 
 ## Changelog
 
+### Version 0.4.0
 
+- The "detached state" is now persistent. 
+
+Compatibility: novelibre 5.6 API
 
 ### Version 0.3.0
 
