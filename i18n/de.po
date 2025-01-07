@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.4.0\n"
-"POT-Creation-Date: 2025-01-07 11:51:11\n"
-"PO-Revision-Date: 2025-01-07 11:51:11\n"
+"Project-Id-Version: 0.4.1\n"
+"POT-Creation-Date: 2025-01-07 21:08:40\n"
+"PO-Revision-Date: 2025-01-07 21:08:40\n"
 "Last-Translator: Peter Triesberger\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,9 @@ msgstr "Markup anzeigen"
 
 msgid "Unnamed"
 msgstr "Unbenannt"
+
+msgid "by"
+msgstr "von"
 
 msgid "https://peter88213.github.io/nvhelp-en"
 msgstr "https://peter88213.github.io/nvhelp-de"

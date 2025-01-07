@@ -15,9 +15,9 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-from nvlib.controller.plugin.plugin_base import PluginBase
 from nvextraview.extra_view_locale import _
 from nvextraview.extra_view_service import ExtraViewService
+from nvlib.controller.plugin.plugin_base import PluginBase
 
 
 class Plugin(PluginBase):

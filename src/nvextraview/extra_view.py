@@ -4,9 +4,10 @@ Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_extra_view
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
-from nvlib.gui.contents_window.contents_viewer import ContentsViewer
+from nvextraview.extra_view_locale import _
 from nvextraview.platform.platform_settings import KEYS
 from nvextraview.platform.platform_settings import PLATFORM
+from nvlib.gui.contents_window.contents_viewer import ContentsViewer
 import tkinter as tk
 
 
@@ -43,7 +44,7 @@ class ExtraView(ContentsViewer):
 
     def refresh(self, *args, **kwargs):
         if self._mdl.novel is not None:
-            self.popup.title(self._mdl.novel.title)
+            self.popup.title(f'{self._mdl.novel.title} {_("by")} {self._mdl.novel.authorName}')
         else:
             self.popup.title('')
         super().refresh()

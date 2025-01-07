@@ -82,7 +82,7 @@ class ExtraViewService(SubController):
                 return
 
         self.extraView = ExtraView(self._mdl, self._ui, self._ctrl, self.prefs)
-        set_icon(self.extraView.popup, icon='wLogo32', default=False)
+        set_icon(self.extraView.popup, icon='vLogo32', default=False)
 
     def hide_contents_view(self):
         """Show/hide the contents viewer text box."""

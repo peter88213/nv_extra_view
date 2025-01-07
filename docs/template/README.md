@@ -9,7 +9,7 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 *nv_extra_view* is a "detach text viewer" plugin for novelibre
 
-![Screenshot](docs/Screenshots/screen01.png)
+![Screenshot](docs/Screenshots/screen01.jpg)
 
 
 ## Requirements
