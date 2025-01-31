@@ -6,9 +6,9 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 from pathlib import Path
 
-from mvclib.controller.sub_controller import SubController
-from mvclib.view.set_icon_tk import set_icon
 from nvextraview.extra_view import ExtraView
+from nvlib.controller.sub_controller import SubController
+from nvlib.gui.set_icon_tk import set_icon
 
 
 class ExtraViewService(SubController):
