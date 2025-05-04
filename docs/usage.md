@@ -2,8 +2,8 @@
 
 --- 
 
-A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a daily progress log viewer. 
-
+A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a 
+a detachable text viewer.
 
 ---
 
@@ -14,17 +14,12 @@ A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a daily
 
 *Note: If you install novelibre at a later time, you can always install the plugin afterwards by running the nv_extra_view/ setup script again.*
 
-The plugin adds a **Detach text viewer** entry to the *novelibre* **View** menu. 
 
 ---
 
-# Operation
+# Usage
 
----
-
-- Click **View > Detach text viewer** to detach the text viewer.
-- Close the text viewer window to dock the text viewer.
-
+See the [online help](https://peter88213.github.io/nv_extra_view/help/).
 
 ---
 

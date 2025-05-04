@@ -1,6 +1,7 @@
 [![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_extra_view/raw/main/dist/nv_extra_view_v0.4.1.pyzw)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
+[![Online help](docs/img/help-button.png)](https://peter88213.github.io/nv_extra_view/help/)
 
 
 # nv_extra_view
@@ -51,7 +52,7 @@ The package is also available in zip format: [nv_extra_view_v0.4.1.zip](https://
 
 ## Usage
 
-See the [instructions for use](docs/usage.md)
+See the [instructions for use](https://github.com/peter88213/nv_extra_view)
 
 ---
 
