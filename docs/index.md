@@ -4,7 +4,7 @@
 
 # Index
 
-A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a custom template-based export for the final document.
+A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a detachable text viewer.
 
 - [User guide](help) 
 - [Give feedback or ask a question](https://github.com/peter88213/novelibre/discussions)
