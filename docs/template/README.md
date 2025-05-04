@@ -52,7 +52,7 @@ The package is also available in zip format: [nv_extra_view_v0.99.0.zip](https:/
 
 ## Usage
 
-See the [instructions for use](https://github.com/peter88213/nv_extra_view)
+See the [instructions for use](https://peter88213.github.io/nv_extra_view/help/)
 
 ---
 
