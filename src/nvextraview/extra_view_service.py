@@ -23,7 +23,9 @@ class ExtraViewService(SubController):
     )
 
     def __init__(self, model, view, controller):
-        super().initialize_controller(model, view, controller)
+        self._mdl = model
+        self._ui = view
+        self._ctrl = controller
         self.extraView = None
 
         #--- Load configuration.
