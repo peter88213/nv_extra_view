@@ -45,7 +45,11 @@ class Plugin(PluginBase):
 
         # Create an entry in the View menu.
         pos = self._ui.viewMenu.index(_('Detach/Dock Properties')) + 1
-        self._ui.viewMenu.insert_command(pos, label=self.FEATURE, command=self.start_viewer)
+        self._ui.viewMenu.insert_command(
+            pos,
+            label=self.FEATURE,
+            command=self.start_viewer,
+        )
         self._ui.viewMenu.entryconfig(self.FEATURE)
 
     def on_close(self):

@@ -15,6 +15,7 @@ class ExtraView(ContentsViewer):
 
     def __init__(self, model, view, controller, prefs):
         self._mdl = model
+        self._ui = view
         self._ctrl = controller
         self.popup = tk.Toplevel()
         self.prefs = self._ctrl.get_preferences()
@@ -25,7 +26,7 @@ class ExtraView(ContentsViewer):
         self.popup.protocol("WM_DELETE_WINDOW", self.on_close_viewer)
         if PLATFORM != 'win':
             self.popup.bind(KEYS.QUIT_PROGRAM[0], self.on_quit)
-        ContentsViewer.__init__(self, self.popup, model, view, controller)
+        ContentsViewer.__init__(self, self.popup, model, controller)
         self._mdl.add_observer(self)
         self.refresh()
         self.isOpen = True
@@ -44,12 +45,22 @@ class ExtraView(ContentsViewer):
 
     def refresh(self, *args, **kwargs):
         if self._mdl.novel is not None:
-            self.popup.title(f'{self._mdl.novel.title} {_("by")} {self._mdl.novel.authorName}')
+            self.popup.title(
+                (
+                    f'{self._mdl.novel.title} {_("by")} '
+                    f'{self._mdl.novel.authorName}'
+                )
+            )
         else:
             self.popup.title('')
         super().refresh()
 
     def show_contents_view(self):
         if not self._ui.middleFrame.winfo_manager():
-            self._ui.middleFrame.pack(after=self._ui.leftFrame, side='left', expand=False, fill='both')
+            self._ui.middleFrame.pack(
+                after=self._ui.leftFrame,
+                side='left',
+                expand=False,
+                fill='both',
+            )
 
