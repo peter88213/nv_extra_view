@@ -14,7 +14,7 @@ import sys
 import zipfile
 
 PLUGIN = 'nv_extra_view.py'
-VERSION = ' @release'
+VERSION = '@release'
 
 pyz = os.path.dirname(__file__)
 
