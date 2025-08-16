@@ -3,8 +3,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.4.0\n"
-"POT-Creation-Date: 2025-01-07 21:08:29\n"
+"Project-Id-Version: 0.4.2\n"
+"POT-Creation-Date: 2025-08-16 10:42:17\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: LANGUAGE\n"
@@ -13,6 +13,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: novxlib pgettext.py 0.3\n"
 
+
+msgid "1st Edit"
+msgstr ""
+
+msgid "2nd Edit"
+msgstr ""
 
 msgid "Ctrl"
 msgstr ""
@@ -23,6 +29,12 @@ msgstr ""
 msgid "Detach/Dock Properties"
 msgstr ""
 
+msgid "Done"
+msgstr ""
+
+msgid "Draft"
+msgstr ""
+
 msgid "Major Character"
 msgstr ""
 
@@ -30,6 +42,9 @@ msgid "Minor Character"
 msgstr ""
 
 msgid "No text available"
+msgstr ""
+
+msgid "Outline"
 msgstr ""
 
 msgid "Show markup"
