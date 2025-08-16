@@ -4,6 +4,12 @@
 
 ## Changelog
 
+### Version 0.4.2
+
+- Refactored the code for better maintainability.
+
+Compatibility: novelibre 5.6 API
+
 ### Version 0.4.1
 
 - Window icon changed.
