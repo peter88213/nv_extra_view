@@ -1,4 +1,4 @@
-[Project homepage](https://github.com/peter88213/nv_extra_view) > [Index](../) > User guide
+[Project homepage](https://github.com/peter88213/nv_extra_view) > User guide
 
 ---
 
@@ -19,4 +19,4 @@ The plugin adds a **Detach text viewer** entry to the *novelibre* **View** menu.
 
 ---
 
-Copyright (c) 2025 by Peter Triesberger. All rights reserved.
+Copyright (c) by Peter Triesberger. All rights reserved.
